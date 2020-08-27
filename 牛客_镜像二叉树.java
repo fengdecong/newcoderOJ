@@ -6,9 +6,9 @@ public void Mirror(TreeNode root){
 	TreeNode node = root.left;
 	root.left = root.right;
 	root.right = node;
-	while(root.left != null){
+	if(root.left != null){
 		Mirror(root.left);
-	}while(root.right != null){
+	}if(root.right != null){
 		Mirror(root.right);
 	} 
 }
